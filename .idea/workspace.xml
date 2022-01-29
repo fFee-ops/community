@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="be148d88-823f-4371-8265-95f386320d46" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="$PROJECT_DIR$/../../apache-maven-3.6.3" />
+        <option name="userSettingsFile" value="D:\apache-maven-3.6.3\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="23rvsR6VaZsN59MP23iM4fuKw0o" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showVisibilityIcons" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ExpandSpringBootJavaOptionsPanel" value="true" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/static/img" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.import" />
+  </component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\IDEAworkspace\community\src\main\resources\static\img" />
+      <recent name="D:\IDEAworkspace\community\src\main\java\com\sl\community" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.sl.community.service.impl" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.sl.community.service" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.CommunityApplication">
+    <configuration name="MailTest.testMail" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="community" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.nowcoder.community.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.nowcoder.community" />
+      <option name="MAIN_CLASS_NAME" value="com.nowcoder.community.MailTest" />
+      <option name="METHOD_NAME" value="testMail" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RedisTests.testStrings" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="community" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.nowcoder.community.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.nowcoder.community" />
+      <option name="MAIN_CLASS_NAME" value="com.nowcoder.community.RedisTests" />
+      <option name="METHOD_NAME" value="testStrings" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CommunityApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="community" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.nowcoder.community.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.nowcoder.community.CommunityApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CommunityApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="community" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.sl.community.CommunityApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="JUnit.MailTest.testMail" />
+      <item itemvalue="JUnit.RedisTests.testStrings" />
+      <item itemvalue="Spring Boot.CommunityApplication" />
+      <item itemvalue="Spring Boot.CommunityApplication (1)" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.CommunityApplication (1)" />
+        <item itemvalue="JUnit.RedisTests.testStrings" />
+        <item itemvalue="JUnit.MailTest.testMail" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="be148d88-823f-4371-8265-95f386320d46" name="Default Changelist" comment="" />
+      <created>1642505228921</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1642505228921</updated>
+      <workItem from="1642505253806" duration="926000" />
+      <workItem from="1642506927218" duration="8284000" />
+      <workItem from="1642598625218" duration="1602000" />
+      <workItem from="1643017722278" duration="3021000" />
+      <workItem from="1643020904097" duration="2952000" />
+      <workItem from="1643024685336" duration="1616000" />
+      <workItem from="1643026346068" duration="2223000" />
+      <workItem from="1643091957121" duration="21302000" />
+      <workItem from="1643266588936" duration="8715000" />
+      <workItem from="1643437893417" duration="6731000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="361" y="70" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1643024986442">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="70" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1643024986442" />
+    <state x="67" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1643019545290">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="67" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.824@0.0.1536.824" timestamp="1643019545290" />
+    <state x="499" y="158" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1643099285410">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="499" y="158" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1643099285410" />
+    <state width="450" height="466" key="DebuggerActiveHint" timestamp="1643444614726">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="450" height="466" key="DebuggerActiveHint/0.0.1536.824@0.0.1536.824" timestamp="1643444614726" />
+    <state x="549" y="166" key="FileChooserDialogImpl" timestamp="1643023112632">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="549" y="166" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1643023112632" />
+    <state width="1493" height="247" key="GridCell.Tab.0.bottom" timestamp="1643445310023">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="247" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1643445310023" />
+    <state width="1493" height="247" key="GridCell.Tab.0.center" timestamp="1643445310023">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="247" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1643445310023" />
+    <state width="1493" height="247" key="GridCell.Tab.0.left" timestamp="1643445310023">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="247" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1643445310023" />
+    <state width="1493" height="247" key="GridCell.Tab.0.right" timestamp="1643445310023">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="247" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1643445310023" />
+    <state width="1493" height="247" key="GridCell.Tab.1.bottom" timestamp="1643445310023">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="247" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1643445310023" />
+    <state width="1493" height="247" key="GridCell.Tab.1.center" timestamp="1643445310023">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="247" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1643445310023" />
+    <state width="1493" height="247" key="GridCell.Tab.1.left" timestamp="1643445310023">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="247" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1643445310023" />
+    <state width="1493" height="247" key="GridCell.Tab.1.right" timestamp="1643445310023">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="247" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1643445310023" />
+    <state width="1493" height="247" key="GridCell.Tab.2.bottom" timestamp="1643445310023">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="247" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1643445310023" />
+    <state width="1493" height="247" key="GridCell.Tab.2.center" timestamp="1643445310023">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="247" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1643445310023" />
+    <state width="1493" height="247" key="GridCell.Tab.2.left" timestamp="1643445310023">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="247" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1643445310023" />
+    <state width="1493" height="247" key="GridCell.Tab.2.right" timestamp="1643445310023">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="247" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1643445310023" />
+    <state x="270" y="56" key="SettingsEditor" timestamp="1643024952526">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="270" y="56" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1643024952526" />
+    <state x="490" y="154" width="561" height="524" key="StructurePopup" timestamp="1643445299384">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="490" y="154" width="561" height="524" key="StructurePopup/0.0.1536.824@0.0.1536.824" timestamp="1643445299384" />
+    <state x="93" y="93" width="1350" height="638" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1643023010871">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="93" y="93" width="1350" height="638" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.0.1536.824@0.0.1536.824" timestamp="1643023010871" />
+    <state x="539" y="169" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1643019387801">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="539" y="169" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1536.824@0.0.1536.824" timestamp="1643019387801" />
+    <state x="313" y="141" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1643269277915">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="313" y="141" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1536.824@0.0.1536.824" timestamp="1643269277915" />
+    <state x="448" y="54" width="673" height="688" key="find.popup" timestamp="1643445035591">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="448" y="54" width="673" height="688" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1643445035591" />
+    <state x="425" y="187" key="run.anything.popup" timestamp="1643018540166">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1643018540166" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1643442466916">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1643442466916" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/sl/community/controller/MessageController.java</url>
+          <line>212</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/sl/community/controller/CommentController.java</url>
+          <line>54</line>
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/sl/community/controller/CommentController.java</url>
+          <line>68</line>
+          <option name="timeStamp" value="25" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/sl/community/controller/DiscussPostController.java</url>
+          <line>174</line>
+          <option name="timeStamp" value="28" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/sl/community/controller/DiscussPostController.java</url>
+          <line>184</line>
+          <option name="timeStamp" value="29" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/sl/community/controller/DiscussPostController.java</url>
+          <line>157</line>
+          <option name="timeStamp" value="31" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/sl/community/controller/UserController.java</url>
+          <line>142</line>
+          <option name="timeStamp" value="33" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo typeName="java.lang.ThreadLocal" fieldName="threadLocalHashCode" />
+      </pinned-members>
+    </pin-to-top-manager>
+  </component>
+</project>

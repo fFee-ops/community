@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--为那个mapper服务的-->
+<mapper namespace="com.sl.community.dao.DiscussPostMapper">
+    <!--sql语句复用-->
+    <sql id="selectFields">
+        id,user_id,title,content,type,status,create_time,comment_count,score
+    </sql>
+
+    <sql id="insertFields">
+        user_id,title,content,type,status,create_time,comment_count,score
+    </sql>
+    <!--orderMode为0表示按照正常显示，为1表示按照热度成绩排序，先置顶，再根据分数，其次是时间-->
+    <select id="selectDiscussPosts" resultType="com.sl.community.entity.DiscussPost">
+        select <include refid="selectFields"></include>
+        from discuss_post
+        where status!=2
+        <if test="userId!=0">
+            and user_id=#{userId}
+        </if>
+        <if test="orderMode==0">
+            order by type desc,create_time desc
+        </if>
+        <if test="orderMode==1">
+            order by type desc,score desc, create_time desc
+        </if>
+        limit #{offset},#{limit}
+    </select>
+
+    <select id="selectDiscussPostRows" resultType="int">
+        select count(id)
+        from discuss_post
+        where status!=2
+        <if test="userId!=0">
+            and user_id=#{userId}
+        </if>
+    </select>
+
+    <!--自动生成主键自增后返回，告诉他主键是谁-->
+     <insert id="insertDiscussPost" parameterType="com.sl.community.entity.DiscussPost" keyProperty="id">
+         insert into discuss_post(<include refid="insertFields"></include>)
+        values (#{userId},#{title},#{content},#{type},#{status},#{createTime},#{commentCount},#{score})
+     </insert>
+
+    <select id="selectDiscussById" resultType="com.sl.community.entity.DiscussPost">
+        select * from discuss_post where id=#{id}
+    </select>
+
+    <update id="updateCommentCount">
+        update discuss_post set comment_count=#{commentCount} where id=#{discussPortId}
+    </update>
+
+    <update id="updateDiscussType">
+        update discuss_post set type=#{type} where id=#{discussPortId}
+    </update>
+
+    <update id="updateDiscussStatus">
+        update discuss_post set status=#{status} where id=#{discussPortId}
+    </update>
+
+    <update id="updateDiscussScore">
+        update discuss_post set score=#{score} where id=#{postId}
+    </update>
+</mapper>
