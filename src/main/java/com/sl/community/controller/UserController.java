@@ -4,10 +4,7 @@ import com.sl.community.entity.Comment;
 import com.sl.community.entity.DiscussPost;
 import com.sl.community.entity.Page;
 import com.sl.community.entity.User;
-import com.sl.community.service.CommentService;
-import com.sl.community.service.FollowService;
-import com.sl.community.service.LikeService;
-import com.sl.community.service.UserService;
+import com.sl.community.service.*;
 import com.sl.community.service.impl.DiscussPostServiceImpl;
 import com.sl.community.util.CommunityConstant;
 import com.sl.community.util.CommunityUtil;
@@ -78,6 +75,9 @@ public class UserController implements CommunityConstant {
 
     @Autowired
     private FollowService followService;
+
+    @Autowired
+    private BlockService blockService;
 
     @Autowired
     private DiscussPostServiceImpl discussPostService;
@@ -291,6 +291,13 @@ public class UserController implements CommunityConstant {
         }
         model.addAttribute("hasFollowed",hasFollowed);
 
+        //当前登录用户对某用户是否已拉黑
+        //先判断当前用户是否登录
+        boolean hasBlocked=false;
+        if(hostHolder.getUser()!=null){
+            hasBlocked = blockService.hasBlocked(hostHolder.getUser().getId(), ENTITY_TYPE_USER, userId);
+        }
+        model.addAttribute("hasBlocked",hasBlocked);
         return "/site/profile";
     }
 

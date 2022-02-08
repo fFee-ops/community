@@ -17,6 +17,10 @@ public class RedisKeyUtil {
     private static final String PREFIX_FOLLOWEE="followee";
     //粉丝前缀
     private static final String PREFIX_FOLLOWER="follower";
+    //要拉黑的人的前缀
+    private static final String PREFIX_BLOCKING="blocking";
+    //黑粉前缀
+    private static final String PREFIX_BLOCKED="blocked";
     //验证码key的前缀
     private static final String PREFIX_KAPTCHA="kaptcha";
     //凭证key的前缀
@@ -57,6 +61,14 @@ public class RedisKeyUtil {
         return PREFIX_FOLLOWER + SPLIT + entityType + SPLIT + entityId;
     }
 
+
+    public static String getBlockingKey(int userId,int entityType){
+        return PREFIX_BLOCKING + SPLIT + userId + SPLIT +entityType;
+    }
+
+    public static String getBlockedKey(int entityType,int entityId){
+        return PREFIX_BLOCKED + SPLIT + entityType + SPLIT + entityId;
+    }
     //拼接验证码
     public static String getKaptchaKey(String owner){
         return PREFIX_KAPTCHA + SPLIT +owner;

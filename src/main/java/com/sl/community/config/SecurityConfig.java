@@ -39,7 +39,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter implements Comm
                         "/notice/**",
                         "/like",
                         "/follow",
-                        "/unfollow"
+                        "/unfollow",
+                        "/block",
+                        "/unblock"
                 )
                 .hasAnyAuthority(
                     //任意一个权限都可访问

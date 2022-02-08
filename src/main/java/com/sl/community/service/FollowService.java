@@ -9,11 +9,17 @@ import java.util.Map;
  * Description:
  */
 public interface FollowService {
-    long findFolloweeCount(int userId,int entityType);
-    List<Map<String,Object>> findFollowees(int userId, int offset, int limit);
-    long findFollowerCount(int entityType,int entityId);
-    List<Map<String,Object>> findFollowers(int userId,int offset,int limit);
-    void follow(int userId,int entityType,int entityId);
-    boolean hasFollowed(int userId,int entityType,int entityId);
-    void unfollow(int userId,int entityType,int entityId);
+    long findFolloweeCount(int userId, int entityType);
+
+    List<Map<String, Object>> findFollowees(int userId, int offset, int limit);
+
+    long findFollowerCount(int entityType, int entityId);
+
+    List<Map<String, Object>> findFollowers(int userId, int offset, int limit);
+
+    void follow(int userId, int entityType, int entityId);
+
+    boolean hasFollowed(int userId, int entityType, int entityId);
+
+    void unfollow(int userId, int entityType, int entityId);
 }

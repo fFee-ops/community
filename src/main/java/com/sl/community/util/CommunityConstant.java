@@ -37,6 +37,9 @@ public interface CommunityConstant {
         //主题：关注
         String TOPIC_FOLLOW="follow";
 
+        //主题：拉黑
+        String TOPIC_BLOCK="block";
+
         //主题：分享
         String TOPIC_SHARE="share";
 
