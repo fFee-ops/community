@@ -97,7 +97,7 @@
                         <button type="button"
                                 th:class="|btn ${hasFollowed?'btn-secondary':'btn-info'} btn-sm float-right mr-5 follow-btn|"
                                 th:text="${hasFollowed?'已关注':'关注TA'}"
-                                th:if="${loginUser!=null && loginUser.id!=user.id}">关注TA
+                                th:if="${!(hasBlocked)&&loginUser!=null && loginUser.id!=user.id}">关注TA
                         </button>
                         <input type="hidden" id="entityId2" th:value="${user.id}">
 						<button type="button"
