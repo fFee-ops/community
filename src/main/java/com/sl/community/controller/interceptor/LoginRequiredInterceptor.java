@@ -12,8 +12,8 @@ import javax.servlet.http.HttpServletResponse;
 import java.lang.reflect.Method;
 
 /**
- * @author xzzz2020
- * @version 1.0
+ *
+ *
  * @date 2021/12/9 11:23
  */
 @Component  //拦截器

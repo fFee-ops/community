@@ -3,8 +3,8 @@ package com.sl.community.entity;
 import java.util.Date;
 
 /**
- * @author xzzz2020
- * @version 1.0
+ *
+ *
  * @date 2021/12/12 11:38
  */
 public class Message {

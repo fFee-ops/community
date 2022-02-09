@@ -4,8 +4,8 @@ import com.sl.community.entity.User;
 import org.springframework.stereotype.Component;
 
 /**
- * @author xzzz2020
- * @version 1.0
+ *
+ *
  * @date 2021/12/8 19:34
  */
 

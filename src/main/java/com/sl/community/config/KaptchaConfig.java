@@ -9,8 +9,8 @@ import org.springframework.context.annotation.Configuration;
 import java.util.Properties;
 
 /**
- * @author xzzz2020
- * @version 1.0
+ *
+ *
  * @date 2021/12/8 11:42
  */
 @Configuration

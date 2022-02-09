@@ -7,8 +7,8 @@ import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.serializer.RedisSerializer;
 
 /**
- * @author xzzz2020
- * @version 1.0
+ *
+ *
  * @date 2021/12/13 17:15
  */
 @Configuration

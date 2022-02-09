@@ -15,8 +15,8 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
- * @author xzzz2020
- * @version 1.0
+ *
+ *
  * @date 2021/12/13 15:23
  */
 @Component

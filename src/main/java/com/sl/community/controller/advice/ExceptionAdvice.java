@@ -13,8 +13,8 @@ import java.io.IOException;
 import java.io.PrintWriter;
 
 /**
- * @author xzzz2020
- * @version 1.0
+ *
+ *
  * @date 2021/12/13 9:33
  */
 @ControllerAdvice(annotations = Controller.class)  //只有带有Controller注解的会被异常处理

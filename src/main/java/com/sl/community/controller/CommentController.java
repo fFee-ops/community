@@ -19,8 +19,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import java.util.Date;
 
 /**
- * @author xzzz2020
- * @version 1.0
+ *
+ *
  * @date 2021/12/12 10:01
  */
 @Controller

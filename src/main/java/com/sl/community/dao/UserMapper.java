@@ -4,8 +4,8 @@ import com.sl.community.entity.User;
 import org.apache.ibatis.annotations.Mapper;
 
 /**
- * @author xzzz2020
- * @version 1.0
+ *
+ *
  * @date 2021/12/6 17:02
  */
 @Mapper

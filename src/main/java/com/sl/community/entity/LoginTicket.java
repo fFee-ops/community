@@ -3,8 +3,8 @@ package com.sl.community.entity;
 import java.util.Date;
 
 /**
- * @author xzzz2020
- * @version 1.0
+ *
+ *
  * @date 2021/12/8 14:56
  */
 public class LoginTicket {

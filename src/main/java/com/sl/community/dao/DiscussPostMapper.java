@@ -7,8 +7,8 @@ import org.apache.ibatis.annotations.Param;
 import java.util.List;
 
 /**
- * @author xzzz2020
- * @version 1.0
+ *
+ *
  * @date 2021/12/6 20:07
  */
 @Mapper

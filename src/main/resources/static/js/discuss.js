@@ -3,6 +3,7 @@ $(function(){
     $("#topBtn").click(setTop);
     $("#wonderfulBtn").click(setWonderful);
     $("#deleteBtn").click(setDelete);
+    $("#deleteBtn2").click(setDelete);
 });
 
 function like(btn, entityType, entityId,entityUserId,postId) {

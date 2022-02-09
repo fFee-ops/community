@@ -1,8 +1,8 @@
 package com.sl.community.util;
 
 /**
- * @author xzzz2020
- * @version 1.0
+ *
+ *
  * @date 2021/12/13 20:30
  */
 public class RedisKeyUtil {

@@ -6,8 +6,8 @@ import org.apache.ibatis.annotations.Mapper;
 import java.util.List;
 
 /**
- * @author xzzz2020
- * @version 1.0
+ *
+ *
  * @date 2021/12/10 14:21
  */
 @Mapper

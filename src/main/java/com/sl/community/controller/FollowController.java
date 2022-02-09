@@ -4,6 +4,7 @@ import com.sl.community.entity.Event;
 import com.sl.community.entity.Page;
 import com.sl.community.entity.User;
 import com.sl.community.event.EventProducer;
+import com.sl.community.service.BlockService;
 import com.sl.community.service.FollowService;
 import com.sl.community.service.UserService;
 import com.sl.community.util.CommunityConstant;
@@ -22,14 +23,17 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * @author xzzz2020
- * @version 1.0
+ *
+ *
  * @date 2021/12/14 16:38
  */
 @Controller
 public class FollowController implements CommunityConstant {
     @Autowired
     private FollowService followService;
+
+    @Autowired
+    private BlockService blockService;
 
     @Autowired
     private HostHolder hostHolder;
@@ -138,6 +142,9 @@ public class FollowController implements CommunityConstant {
             for (Map<String, Object> map : userList) {
                 User u = (User) map.get("user");
                 map.put("hasFollowed",hasFollowed(u.getId()));
+                boolean hasBlocked = blockService.hasBlocked(hostHolder.getUser().getId(), ENTITY_TYPE_USER, userId);
+                map.put("hasBlocked",hasBlocked);
+                System.out.println("用户："+u.getUsername()+"【被拉黑状态】："+hasBlocked);
             }
         }
         model.addAttribute("users",userList);

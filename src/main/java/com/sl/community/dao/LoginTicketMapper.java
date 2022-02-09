@@ -4,8 +4,8 @@ import com.sl.community.entity.LoginTicket;
 import org.apache.ibatis.annotations.*;
 
 /**
- * @author xzzz2020
- * @version 1.0
+ *
+ *
  * @date 2021/12/8 14:59
  */
 @Mapper

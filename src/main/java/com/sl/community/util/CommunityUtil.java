@@ -8,8 +8,8 @@ import java.util.Map;
 import java.util.UUID;
 
 /**
- * @author xzzz2020
- * @version 1.0
+ *
+ *
  * @date 2021/12/7 17:10
  */
 /*工具类，静态方法方便调用*/

@@ -19,8 +19,8 @@ import javax.servlet.http.HttpServletResponse;
 import java.util.Date;
 
 /**
- * @author xzzz2020
- * @version 1.0
+ *
+ *
  * @date 2021/12/8 19:18
  */
 @Component
