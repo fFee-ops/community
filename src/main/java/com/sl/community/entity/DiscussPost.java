@@ -7,16 +7,16 @@ import org.springframework.data.elasticsearch.annotations.FieldType;
 
 import java.util.Date;
 
-@Document(indexName = "discusspost",type="_doc",shards = 6,replicas = 3)
+@Document(indexName = "discusspost", type = "_doc", shards = 6, replicas = 3)
 public class DiscussPost {
 
     @Id
     private int id;
     @Field(type = FieldType.Integer)
     private int userId;
-    @Field(type = FieldType.Text,analyzer = "ik_max_word",searchAnalyzer = "ik_smart")
+    @Field(type = FieldType.Text, analyzer = "ik_max_word", searchAnalyzer = "ik_smart")
     private String title;
-    @Field(type = FieldType.Text,analyzer = "ik_max_word",searchAnalyzer = "ik_smart")
+    @Field(type = FieldType.Text, analyzer = "ik_max_word", searchAnalyzer = "ik_smart")
     private String content;
     @Field(type = FieldType.Integer)
     private int type;
@@ -28,6 +28,26 @@ public class DiscussPost {
     private int commentCount;
     @Field(type = FieldType.Double)
     private double score;
+    @Field(type = FieldType.Integer)
+    private int isForward;
+    @Field(type = FieldType.Integer)
+    private int originalUserId;
+
+    public int getOriginalUserId() {
+        return originalUserId;
+    }
+
+    public void setOriginalUserId(int originalUserId) {
+        this.originalUserId = originalUserId;
+    }
+
+    public int getIsForward() {
+        return isForward;
+    }
+
+    public void setIsForward(int isForward) {
+        this.isForward = isForward;
+    }
 
     public int getId() {
         return id;
@@ -113,6 +133,8 @@ public class DiscussPost {
                 ", createTime=" + createTime +
                 ", commentCount=" + commentCount +
                 ", score=" + score +
+                ", isForward=" + isForward +
+                ", originalUserId=" + originalUserId +
                 '}';
     }
 }

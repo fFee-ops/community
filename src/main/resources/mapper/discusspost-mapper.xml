@@ -10,7 +10,7 @@
     </sql>
 
     <sql id="insertFields">
-        user_id,title,content,type,status,create_time,comment_count,score
+        user_id,title,content,type,status,create_time,comment_count,score,isforward,original_user_id
     </sql>
     <!--orderMode为0表示按照正常显示，为1表示按照热度成绩排序，先置顶，再根据分数，其次是时间-->
     <select id="selectDiscussPosts" resultType="com.sl.community.entity.DiscussPost">
@@ -41,7 +41,7 @@
     <!--自动生成主键自增后返回，告诉他主键是谁-->
      <insert id="insertDiscussPost" parameterType="com.sl.community.entity.DiscussPost" keyProperty="id">
          insert into discuss_post(<include refid="insertFields"></include>)
-        values (#{userId},#{title},#{content},#{type},#{status},#{createTime},#{commentCount},#{score})
+        values (#{userId},#{title},#{content},#{type},#{status},#{createTime},#{commentCount},#{score},#{isForward},#{originalUserId})
      </insert>
 
     <select id="selectDiscussById" resultType="com.sl.community.entity.DiscussPost">

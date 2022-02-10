@@ -71,7 +71,7 @@
             <!-- 标题 -->
             <h6 class="mb-4">
                 <img src="http://static.nowcoder.com/images/img/icons/ico-discuss.png"/>
-                <span th:utext="${post.title}">备战春招，面试刷题跟他复习，一个月全搞定！</span>
+                <span th:utext="${post.title}" th:id="title_backup">备战春招，面试刷题跟他复习，一个月全搞定！</span>
                 <div class="float-right">
                     <input type="hidden" id="postId" th:value="${post.id}">
                     <button type="button" class="btn btn-danger btn-sm" id="topBtn"
@@ -94,7 +94,7 @@
                     <img th:src="${user.headerUrl}" class="align-self-start mr-4 rounded-circle user-header" alt="用户头像">
                 </a>
                 <div class="media-body">
-                    <div class="mt-0 text-warning" th:utext="${user.username}"></div>
+                    <div class="mt-0 text-warning" th:utext="${user.username}" th:id="username_backup"></div>
                     <div class="text-muted mt-3">
                         发布于 <b th:text="${#dates.format(post.createTime,'yyyy-MM-dd HH:mm:ss')}">2019-04-15 15:32:18</b>
                         <ul class="d-inline float-right">
@@ -112,13 +112,18 @@
                 </div>
             </div>
             <!-- 正文 -->
-            <div class="mt-4 mb-3 content" th:utext="${post.content}">
+            <div class="mt-4 mb-3 content" th:utext="${post.content}" th:id="content_backup">
                 金三银四的金三已经到了，你还沉浸在过年的喜悦中吗？
                 如果是，那我要让你清醒一下了：目前大部分公司已经开启了内推，正式网申也将在3月份陆续开始，金三银四，春招的求职黄金时期已经来啦！！！
                 再不准备，作为19应届生的你可能就找不到工作了。。。作为20届实习生的你可能就找不到实习了。。。
                 现阶段时间紧，任务重，能做到短时间内快速提升的也就只有算法了，
                 那么算法要怎么复习？重点在哪里？常见笔试面试算法题型和解题思路以及最优代码是怎样的？
                 跟左程云老师学算法，不仅能解决以上所有问题，还能在短时间内得到最大程度的提升！！！
+            </div>
+            <!--转发信息栏 -->
+            <div class="mt-4 mb-3 content" th:if="${post.isForward==1}">
+                <hr color="red"/>
+                <span class="forwardInfo">该文章为转载文章，点击<a th:href="@{|/user/profile/${post.originalUserId}|}">此处</a>访问原作者页面</span>
             </div>
         </div>
         <!-- 回帖 -->
@@ -129,6 +134,7 @@
                     <h6><b class="square"></b> <i th:text="${post.commentCount}">30</i>条回帖</h6>
                 </div>
                 <div class="col-4 text-right">
+                    <a id="forwardBtn" class="btn btn-primary btn-sm">&nbsp;&nbsp;转&nbsp;&nbsp;发&nbsp;&nbsp;</a>
                     <a href="#replyform" class="btn btn-primary btn-sm">&nbsp;&nbsp;回&nbsp;&nbsp;帖&nbsp;&nbsp;</a>
                 </div>
             </div>
@@ -261,7 +267,22 @@
         </div>
     </div>
 
+    <!-- 提示框 -->
+    <div class="modal fade" id="hintModal" tabindex="-1" role="dialog" aria-labelledby="hintModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="hintModalLabel">提示</h5>
+                </div>
+                <div class="modal-body" id="hintBody">
+                    转发成功!
+                </div>
+            </div>
+        </div>
+    </div>
 
+<!--    用来在转发的时候获取原作者用户id-->
+    <input type="hidden" id="originalUserId" th:value="${user.id}">
 </div>
 <script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"

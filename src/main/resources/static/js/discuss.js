@@ -4,6 +4,7 @@ $(function(){
     $("#wonderfulBtn").click(setWonderful);
     $("#deleteBtn").click(setDelete);
     $("#deleteBtn2").click(setDelete);
+    $("#forwardBtn").click(forwardArticle);
 });
 
 function like(btn, entityType, entityId,entityUserId,postId) {
@@ -73,4 +74,33 @@ function setDelete() {
             }
         }
     );
+
 }
+    // 转发文章
+    function forwardArticle() {
+        // 获取标题和内容
+        var title = "【转载】"+$("#title_backup").html();
+        var content = $("#content_backup").text();
+        var originalUserId=$("#originalUserId").val();
+        // 发送异步请求(POST)
+        $.post(
+            CONTEXT_PATH + "/discuss/forward",
+            {"title":title,"content":content,"originalUserId":originalUserId},
+            function(data) {
+                data = $.parseJSON(data);
+                // 在提示框中显示返回消息
+                $("#hintBody").text(data.msg);
+                // 显示提示框
+                $("#hintModal").modal("show");
+                // 2秒后,自动隐藏提示框
+                setTimeout(function(){
+                    $("#hintModal").modal("hide");
+                    // 刷新页面
+                    if(data.code == 0) {
+                        window.location.reload();
+                    }
+                }, 2000);
+            }
+        );
+
+    }
