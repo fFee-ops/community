@@ -21,9 +21,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.*;
 
-/**
- * @date 2021/12/10 10:01
- */
+
 @Controller
 @RequestMapping("/discuss")
 public class DiscussPostController implements CommunityConstant {

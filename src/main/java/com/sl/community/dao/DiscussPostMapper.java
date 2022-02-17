@@ -9,7 +9,7 @@ import java.util.List;
 /**
  *
  *
- * @date 2021/12/6 20:07
+ * /6 20:07
  */
 @Mapper
 public interface DiscussPostMapper {

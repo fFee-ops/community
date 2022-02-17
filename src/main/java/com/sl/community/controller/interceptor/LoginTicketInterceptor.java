@@ -21,7 +21,7 @@ import java.util.Date;
 /**
  *
  *
- * @date 2021/12/8 19:18
+ * /8 19:18
  */
 @Component
 public class LoginTicketInterceptor implements HandlerInterceptor {//拦截器要继承接口

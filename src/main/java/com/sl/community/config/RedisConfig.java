@@ -9,7 +9,7 @@ import org.springframework.data.redis.serializer.RedisSerializer;
 /**
  *
  *
- * @date 2021/12/13 17:15
+ * /13 17:15
  */
 @Configuration
 public class RedisConfig {

@@ -11,7 +11,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 /**
  *
  *
- * @date 2021/12/8 19:03
+ * /8 19:03
  */
 @Configuration  //配置类
 public class WebMvcConfig implements WebMvcConfigurer {//实现接口

@@ -15,7 +15,7 @@ import java.io.PrintWriter;
 /**
  *
  *
- * @date 2021/12/13 9:33
+ * /13 9:33
  */
 @ControllerAdvice(annotations = Controller.class)  //只有带有Controller注解的会被异常处理
 public class ExceptionAdvice {

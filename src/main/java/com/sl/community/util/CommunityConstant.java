@@ -3,7 +3,7 @@ package com.sl.community.util;
 /**
  *
  *
- * @date 2021/12/8 10:09
+ * /8 10:09
  */
 public interface CommunityConstant {
 

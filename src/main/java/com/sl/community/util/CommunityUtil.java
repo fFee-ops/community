@@ -10,7 +10,6 @@ import java.util.UUID;
 /**
  *
  *
- * @date 2021/12/7 17:10
  */
 /*工具类，静态方法方便调用*/
 public class CommunityUtil {

@@ -6,7 +6,7 @@ import org.apache.ibatis.annotations.*;
 /**
  *
  *
- * @date 2021/12/8 14:59
+ * /8 14:59
  */
 @Mapper
 @Deprecated  //废弃了，不推荐使用

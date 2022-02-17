@@ -3,7 +3,7 @@ package com.sl.community.util;
 /**
  *
  *
- * @date 2021/12/13 20:30
+ * /13 20:30
  */
 public class RedisKeyUtil {
     //拼接key的常量

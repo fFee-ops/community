@@ -3,7 +3,7 @@ package com.sl.community.entity;
 /**
  *
  *
- * @date 2021/12/7 10:25
+ * /7 10:25
  */
 /*封装分页相关信息,页面传入，服务器查询，计算得到*/
 public class Page {

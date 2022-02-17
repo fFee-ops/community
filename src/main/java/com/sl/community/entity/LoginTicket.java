@@ -5,7 +5,7 @@ import java.util.Date;
 /**
  *
  *
- * @date 2021/12/8 14:56
+ * /8 14:56
  */
 public class LoginTicket {
     private int id;

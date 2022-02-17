@@ -25,7 +25,7 @@ import java.util.Map;
 /**
  *
  *
- * @date 2021/12/14 16:38
+ * /14 16:38
  */
 @Controller
 public class FollowController implements CommunityConstant {

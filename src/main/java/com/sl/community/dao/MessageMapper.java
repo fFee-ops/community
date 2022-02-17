@@ -8,7 +8,7 @@ import java.util.List;
 /**
  *
  *
- * @date 2021/12/12 11:41
+ * /12 11:41
  */
 @Mapper
 public interface MessageMapper {

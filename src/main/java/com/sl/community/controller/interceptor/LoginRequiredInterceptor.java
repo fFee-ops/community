@@ -14,7 +14,7 @@ import java.lang.reflect.Method;
 /**
  *
  *
- * @date 2021/12/9 11:23
+ * /9 11:23
  */
 @Component  //拦截器
 public class LoginRequiredInterceptor implements HandlerInterceptor {

@@ -11,7 +11,7 @@ import java.util.Properties;
 /**
  *
  *
- * @date 2021/12/8 11:42
+ * /8 11:42
  */
 @Configuration
 public class KaptchaConfig {

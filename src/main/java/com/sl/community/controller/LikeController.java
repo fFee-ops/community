@@ -21,7 +21,7 @@ import java.util.Map;
 /**
  *
  *
- * @date 2021/12/13 21:03
+ * /13 21:03
  */
 @Controller
 public class LikeController implements CommunityConstant {

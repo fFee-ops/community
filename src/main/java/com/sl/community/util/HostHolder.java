@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 /**
  *
  *
- * @date 2021/12/8 19:34
+ * /8 19:34
  */
 
 /*持有用户的信息，多线程隔离，用于代替session对象*/

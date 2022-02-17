@@ -8,7 +8,7 @@ import java.util.List;
 /**
  *
  *
- * @date 2021/12/10 14:21
+ * 14:21
  */
 @Mapper
 public interface CommentMapper {

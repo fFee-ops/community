@@ -29,7 +29,7 @@ import java.util.concurrent.TimeUnit;
 /**
  *
  *
- * @date 2021/12/7 17:02
+ * /7 17:02
  */
 @Controller
 public class LoginController implements CommunityConstant {

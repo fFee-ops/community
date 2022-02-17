@@ -14,7 +14,7 @@ import javax.mail.internet.MimeMessage;
 /**
  *
  *
- * @date 2021/12/7 15:43
+ * /7 15:43
  */
 @Component //交给spring管理
 public class MailClient {
