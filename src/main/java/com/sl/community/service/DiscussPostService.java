@@ -18,4 +18,5 @@ public interface DiscussPostService {
     int updateDiscussScore(int postId,double score);
     int updateDiscussStatus(int id,int status);
     int updateDiscussType(int id,int type);
+    int visibleDiscuss(int postId,int visible);
 }

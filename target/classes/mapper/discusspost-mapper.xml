@@ -6,15 +6,16 @@
 <mapper namespace="com.sl.community.dao.DiscussPostMapper">
     <!--sql语句复用-->
     <sql id="selectFields">
-        id,user_id,title,content,type,status,create_time,comment_count,score
+        id,user_id,title,content,type,status,create_time,comment_count,score,original_user_id,visible
     </sql>
 
     <sql id="insertFields">
-        user_id,title,content,type,status,create_time,comment_count,score,isforward,original_user_id
+        user_id,title,content,type,status,create_time,comment_count,score,isforward,original_user_id,visible
     </sql>
     <!--orderMode为0表示按照正常显示，为1表示按照热度成绩排序，先置顶，再根据分数，其次是时间-->
     <select id="selectDiscussPosts" resultType="com.sl.community.entity.DiscussPost">
-        select <include refid="selectFields"></include>
+        select
+        <include refid="selectFields"></include>
         from discuss_post
         where status!=2
         <if test="userId!=0">
@@ -39,10 +40,11 @@
     </select>
 
     <!--自动生成主键自增后返回，告诉他主键是谁-->
-     <insert id="insertDiscussPost" parameterType="com.sl.community.entity.DiscussPost" keyProperty="id">
-         insert into discuss_post(<include refid="insertFields"></include>)
-        values (#{userId},#{title},#{content},#{type},#{status},#{createTime},#{commentCount},#{score},#{isForward},#{originalUserId})
-     </insert>
+    <insert id="insertDiscussPost" parameterType="com.sl.community.entity.DiscussPost" keyProperty="id">
+        insert into discuss_post(<include refid="insertFields"></include>)
+        values
+        (#{userId},#{title},#{content},#{type},#{status},#{createTime},#{commentCount},#{score},#{isForward},#{originalUserId},#{visible})
+    </insert>
 
     <select id="selectDiscussById" resultType="com.sl.community.entity.DiscussPost">
         select * from discuss_post where id=#{id}
@@ -62,5 +64,8 @@
 
     <update id="updateDiscussScore">
         update discuss_post set score=#{score} where id=#{postId}
+    </update>
+    <update id="visibleDiscuss">
+        update discuss_post set visible=#{visible} where id=#{postId}
     </update>
 </mapper>

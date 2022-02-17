@@ -88,8 +88,9 @@
             <div class="mt-4">
                 <h6><b class="square"></b> 发布的帖子(<i th:text="${page.rows}">93</i>)</h6>
                 <ul class="list-unstyled mt-4 pl-3 pr-3">
-                    <li class="border-bottom pb-3 mt-4" th:each="map:${discussPostsList}">
-                        <div class="font-size-16 text-info">
+                    <li class="border-bottom pb-3 mt-4" th:each="map:${discussPostsList}"
+                        th:if="${(loginUser.id==user.id)||map.discussPost.visible==0}">
+                        <div class="font-size-16 text-info" >
                             <a th:href="@{|/discuss/detail/${map.discussPost.id}|}" class="text-info"
                                th:utext="${map.discussPost.title}">备战春招，面试刷题跟他复习，一个月全搞定！
                             </a>

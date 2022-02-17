@@ -69,6 +69,8 @@ public class DiscussPostController implements CommunityConstant {
         discussPost.setIsForward(0);
         // 非转发帖子 默认用-1填充字段
         discussPost.setOriginalUserId(-1);
+        // 帖子可见性默认是公开的，也就是0
+        discussPost.setVisible(0);
         discussPostService.addDiscussPort(discussPost);
 
         //发帖之后，触发发帖事件，异步将新发布的帖子添加到es里
@@ -283,6 +285,27 @@ public class DiscussPostController implements CommunityConstant {
         //异步json返回成功信息提示
         return CommunityUtil.getJSIONString(0, "转发成功！");
 
+    }
+
+    @RequestMapping(path = "/visible", method = RequestMethod.POST)
+    @ResponseBody
+    public String visibleDiscuss(int postId, int visible) {
+        User user = hostHolder.getUser();
+        if (user == null) {
+            return CommunityUtil.getJSIONString(403, "您还没有登录，无法进行操作！");
+        }
+        /*
+        取反：前端传过来visible=0，证明现在帖子是可见的，用户想让帖子变为不可见，即让visible=1；
+        反之同理；
+         */
+        if (visible == 0) {
+            visible = 1;
+        } else {
+            visible = 0;
+        }
+        discussPostService.visibleDiscuss(postId, visible);
+
+        return CommunityUtil.getJSIONString(0, "修改帖子状态成功！");
     }
 
 }

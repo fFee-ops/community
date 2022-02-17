@@ -320,7 +320,7 @@ public class UserController implements CommunityConstant {
         page.setRows(discussPostService.findDiscussPostRows(userId));
 
         //查找该用户发布过的帖子
-        List<DiscussPost> discussPostsList = discussPostService.findDiscussPosts(userId, page.getoffset(), page.getLimit(),0);
+        List<DiscussPost> discussPostsList = discussPostService.findDiscussPosts(userId,page.getoffset(), page.getLimit(),0);
         //判断集合是否为空
         if (discussPostsList==null){
             return null;
@@ -331,7 +331,6 @@ public class UserController implements CommunityConstant {
             map.put("discussPost",discussPost);
             long likeCount = likeService.findEntityLikeCount(ENTITY_TYPE_POST, discussPost.getId());
             map.put("likeCount",likeCount);
-
             list.add(map);
 
         }

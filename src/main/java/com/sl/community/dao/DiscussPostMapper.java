@@ -14,7 +14,14 @@ import java.util.List;
 @Mapper
 public interface DiscussPostMapper {
 
-    //查找帖子分页显示(userId是动态需要条件，0表示不拼接，其余拼接)
+    /**
+     * 查找帖子分页显示(userId是动态需要条件，0表示不拼接，其余拼接)
+     * @param userId
+     * @param offset
+     * @param limit
+     * @param orderMode
+     * @return
+     */
     List<DiscussPost> selectDiscussPosts(int userId, int offset, int limit, int orderMode);
 
     //查看（某用户）有多少帖子，动态拼接，只有一个参数，需要起别名
@@ -38,5 +45,11 @@ public interface DiscussPostMapper {
     //修改帖子的分数
     int updateDiscussScore(int postId,double score);
 
-
+    /**
+     * 修改帖子可见性
+     * @param postId
+     * @param visible
+     * @return
+     */
+    int visibleDiscuss(int postId, int visible);
 }

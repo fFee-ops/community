@@ -32,6 +32,17 @@ public class DiscussPost {
     private int isForward;
     @Field(type = FieldType.Integer)
     private int originalUserId;
+    @Field(type = FieldType.Integer)
+    private int visible;
+
+
+    public int getVisible() {
+        return visible;
+    }
+
+    public void setVisible(int visible) {
+        this.visible = visible;
+    }
 
     public int getOriginalUserId() {
         return originalUserId;
@@ -135,6 +146,7 @@ public class DiscussPost {
                 ", score=" + score +
                 ", isForward=" + isForward +
                 ", originalUserId=" + originalUserId +
+                ", visible=" + visible +
                 '}';
     }
 }

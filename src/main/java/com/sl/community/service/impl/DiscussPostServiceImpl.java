@@ -21,14 +21,12 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 /**
- *
- *
  * @date 2021/12/6 20:40
  */
 @Service
 public class DiscussPostServiceImpl implements DiscussPostService {
 
-    private static final Logger logger= LoggerFactory.getLogger(DiscussPostServiceImpl.class);
+    private static final Logger logger = LoggerFactory.getLogger(DiscussPostServiceImpl.class);
 
     @Autowired
     private DiscussPostMapper discussPostMapper;
@@ -43,24 +41,25 @@ public class DiscussPostServiceImpl implements DiscussPostService {
     private int expireSeconds;
 
     //帖子列表缓存
-    private LoadingCache<String,List<DiscussPost>> postListCache;
+    private LoadingCache<String, List<DiscussPost>> postListCache;
 
     //帖子总数缓存
-    private LoadingCache<Integer,Integer> postRowsCache;
+    private LoadingCache<Integer, Integer> postRowsCache;
 
-
-    public List<DiscussPost> findDiscussPosts(int userId,int offset,int limit,int orderMode){
+    @Override
+    public List<DiscussPost> findDiscussPosts(int userId, int offset, int limit, int orderMode) {
         //只缓存热门帖子，只缓存首页，首页用户没登陆，userId为0，缓存一页数据，key就有offset和limit有关。
-        if(userId==0 && orderMode==1){
-            return postListCache.get(offset+":"+limit);
+        if (userId == 0 && orderMode == 1) {
+            return postListCache.get(offset + ":" + limit);
         }
         logger.debug("load post list from DB.");
-        return discussPostMapper.selectDiscussPosts(userId,offset,limit,orderMode);
+        return discussPostMapper.selectDiscussPosts(userId, offset, limit, orderMode);
     }
 
-    public int findDiscussPostRows(int userId){
+    @Override
+    public int findDiscussPostRows(int userId) {
         //缓存的是帖子列表，当用户查询自己的帖子时传入userId，这个时候是不走缓存的。当userId为0，才走缓存。
-        if(userId==0){
+        if (userId == 0) {
             return postRowsCache.get(userId);
         }
         logger.debug("load post list from DB.");
@@ -69,22 +68,22 @@ public class DiscussPostServiceImpl implements DiscussPostService {
 
     //初始化热门帖子、帖子总数缓存
     @PostConstruct
-    public void init(){
+    public void init() {
         //初始化帖子列表缓存
-        postListCache= Caffeine.newBuilder()
+        postListCache = Caffeine.newBuilder()
                 .maximumSize(maxSize)
                 .expireAfterWrite(expireSeconds, TimeUnit.SECONDS)
                 .build(new CacheLoader<String, List<DiscussPost>>() {
                     @Nullable
                     @Override
                     public List<DiscussPost> load(@NonNull String key) throws Exception {
-                        if(key==null || key.length()==0){
+                        if (key == null || key.length() == 0) {
                             throw new IllegalArgumentException("参数错误！");
                         }
                         //解析数据
                         String[] params = key.split(":");
                         //判断解析数据（切割得到的是不是两个）
-                        if(params==null || params.length!=2){
+                        if (params == null || params.length != 2) {
                             throw new IllegalArgumentException("参数错误！");
                         }
                         //有了参数，查数据（缓存）
@@ -92,15 +91,15 @@ public class DiscussPostServiceImpl implements DiscussPostService {
                         int limit = Integer.valueOf(params[1]);
 
                         logger.debug("load post list from DB.");
-                        return discussPostMapper.selectDiscussPosts(0,offset,limit,1);
+                        return discussPostMapper.selectDiscussPosts(0, offset, limit, 1);
                     }
 
                 });
 
         //初始化帖子总数缓存
-        postRowsCache=Caffeine.newBuilder()
+        postRowsCache = Caffeine.newBuilder()
                 .maximumSize(maxSize)
-                .expireAfterWrite(expireSeconds,TimeUnit.SECONDS)
+                .expireAfterWrite(expireSeconds, TimeUnit.SECONDS)
                 .build(new CacheLoader<Integer, Integer>() {
                     @Nullable
                     @Override
@@ -111,10 +110,11 @@ public class DiscussPostServiceImpl implements DiscussPostService {
                 });
     }
 
+    @Override
     /*发布帖子*/
-    public int addDiscussPort(DiscussPost discussPost){
+    public int addDiscussPort(DiscussPost discussPost) {
         //空值判断
-        if(discussPost==null){
+        if (discussPost == null) {
             throw new IllegalArgumentException("内容不能为空！");
         }
         // 对帖子的标题和内容，转移HTML标识
@@ -128,26 +128,43 @@ public class DiscussPostServiceImpl implements DiscussPostService {
         return discussPostMapper.insertDiscussPost(discussPost);
     }
 
+    @Override
     /*查看帖子详情*/
-    public DiscussPost findDiscussDetail(int id){
+    public DiscussPost findDiscussDetail(int id) {
         return discussPostMapper.selectDiscussById(id);
     }
 
+    @Override
     /*跟新帖子的评论数量*/
-    public int updateDiscussCount(int discussId,int commentCount){
-        return discussPostMapper.updateCommentCount(discussId,commentCount);
+    public int updateDiscussCount(int discussId, int commentCount) {
+        return discussPostMapper.updateCommentCount(discussId, commentCount);
     }
 
-    public int updateDiscussType(int id,int type){
+    @Override
+    public int updateDiscussType(int id, int type) {
         return discussPostMapper.updateDiscussType(id, type);
     }
 
-    public int updateDiscussStatus(int id,int status){
+    /**
+     * 修改帖子的可见性
+     *
+     * @param postId  帖子id
+     * @param visible 可见性
+     * @return
+     */
+    @Override
+    public int visibleDiscuss(int postId, int visible) {
+        return discussPostMapper.visibleDiscuss(postId, visible);
+    }
+
+    @Override
+    public int updateDiscussStatus(int id, int status) {
         return discussPostMapper.updateDiscussStatus(id, status);
     }
 
-    public int updateDiscussScore(int postId,double score){
-        return discussPostMapper.updateDiscussScore(postId,score);
+    @Override
+    public int updateDiscussScore(int postId, double score) {
+        return discussPostMapper.updateDiscussScore(postId, score);
     }
 
 }
